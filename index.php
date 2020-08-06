@@ -78,17 +78,32 @@ if (!is_null($events['events'])) {
                     */
                     if($event['message']['text'] == "กำหนดสอบ"){
                         $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-
+                    }elseif($event['message']['text'] == "สอบวันไหน"){
+                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
+                    }elseif($event['message']['text'] == "สอบตอนไหน"){
+                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
+                    }elseif($event['message']['text'] == "สอบเมื่อไร"){
+                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
+                    }elseif($event['message']['text'] == "สอบวันใด"){
+                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
                     }elseif($event['message']['text'] == "ขอใบประกาศ"){
                         $respMessage = "ดาวน์โหลดใบคำร้อง คลิ๊ก >> http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80";
-
-                    }elseif($event['message']['text'] == ""){
-                        $respMessage = ''. $event['message']['text'];
+                    }elseif($event['message']['text'] == "สวัสดี"){
+                        $respMessage = "สวัสดีครับ กองธรรมบอท ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
+                    }elseif($event['message']['text'] == "สวัสดีครับ"){
+                        $respMessage = "สวัสดีครับ กองธรรมบอท ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
+                    }elseif($event['message']['text'] == "สวัสดีค่ะ"){
+                        $respMessage = "สวัสดีครับ กองธรรมบอท ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
+                    }elseif($event['massage']['text'] == "สมัครสอบที่ไหน"){
+                        $respMessage = "ติดต่อวัด หรือ สำนักเรียน หรือโรงเรียนที่มีการสอบธรรมสนามหลวงที่อยู่ใกล้หรือที่สะดวกได้เลยครับ";
+                    }elseif($event['massage']['text'] == "สมัครสอบที่ไหนครับ"){
+                        $respMessage = "ติดต่อวัด หรือ สำนักเรียน หรือโรงเรียนที่มีการสอบธรรมสนามหลวงที่อยู่ใกล้หรือที่สะดวกได้เลยครับ";
+                    }elseif($event['massage']['text'] == "สมัครสอบที่ไหนคะ"){
+                        $respMessage = "ติดต่อวัด หรือ สำนักเรียน หรือโรงเรียนที่มีการสอบธรรมสนามหลวงที่อยู่ใกล้หรือที่สะดวกได้เลยครับ";
+                    }elseif($event['massage']['text'] == "ขอข้อสอบ"){
+                        $respMessage = "ท่านจะได้ข้อสอบ ต่อเมื่อท่านสมัครสอบแล้วไปสอบตามที่กำหนดครับ";
                     }else{
-                        $respMessage = 'ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์)
-                        
-                        ติดต่อหรือแจ้งข้อมูลข่าวสาร email:
-                        mgth.data@gmail.com, kristm76@gmail.com';
+                        $respMessage = "กองธรรมบอท ไม่เข้าใจ กรุณาใช้คำถามใหม่อีกครั้งครับ";
                     }
                                 
                     $httpClient = new CurlHTTPClient($channel_token);
