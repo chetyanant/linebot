@@ -77,17 +77,18 @@ if (!is_null($events['events'])) {
                     }
                     */
                     if($event['message']['text'] == "กำหนดสอบ"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >>
-                        http://www.gongtham.net/web/news.php";
+                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
 
                     }elseif($event['message']['text'] == "ขอใบประกาศ"){
-                        $respMessage = "ดาวน์โหลดใบคำร้อง คลิ๊ก >>
-                        http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80";
+                        $respMessage = "ดาวน์โหลดใบคำร้อง คลิ๊ก >> http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80";
 
                     }elseif($event['message']['text'] == ""){
                         $respMessage = ''. $event['message']['text'];
                     }else{
-                        $respMessage = 'ติดต่อเจ้าหน้าที่ โทร. ...';
+                        $respMessage = 'ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์)
+                        
+                        ติดต่อหรือแจ้งข้อมูลข่าวสาร email:
+                        mgth.data@gmail.com, kristm76@gmail.com';
                     }
                                 
                     $httpClient = new CurlHTTPClient($channel_token);
