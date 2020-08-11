@@ -91,11 +91,11 @@ if (!is_null($events['events'])) {
                     //     $respMessage = 'ติดต่อเจ้าหน้าที่ โทร. ...';
                     // }
                                 
-                    // $httpClient = new CurlHTTPClient($channel_token);
-                    // $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
+                    $httpClient = new CurlHTTPClient($channel_token);
+                    $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
         
-                    // $textMessageBuilder = new TextMessageBuilder($respMessage);
-                    // $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+                    $textMessageBuilder = new TextMessageBuilder($respMessage);
+                    $response = $bot->replyMessage($replyToken, $textMessageBuilder);
                     
                     // break;
             }
