@@ -38,8 +38,9 @@ use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 
 // Token
-$channel_token = 'TBQw9ccESvmiR6bxmUvXXlbLyRfJdXV6tjczChHP/OjGp7hDRBApw0TmJ6xMPhCXv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVpVQ3kIwAT2/uAqs8Q0/AV0cOjbQ4ZnQQK3oqEWA1S5XwdB04t89/1O/w1cDnyilFU=';
-$channel_secret = '8e0040c9cf29e1724558c683fa929bc1';
+// $channel_token = '/5cH8bgLTxuBHp2kPzD22ZeFzPUoIQRn8q/8xJHrkFJQXd6es3fYyQC2Xe8tKkLMv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVoauQH8BDsl+q1qg5sGNoFHTIp+Fq46yQBRoMoXU9iuyQdB04t89/1O/w1cDnyilFU=';
+$channel_token = 'nbIgFBzg8pAmpUnJpb9I99uwzD8eVoLGKgIDO5xPQywMwDgLic96zmVV46sjNxXOv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVoBgfB42B3BLNEl2xZb32IoBZrlbtaw53fI+zG8YcJzKwdB04t89/1O/w1cDnyilFU='
+$channel_secret = '96949e37f434f68b030d11c49de14ddc';
 
 // Get message from Line API
 $content = file_get_contents('php://input');
@@ -61,7 +62,7 @@ if (!is_null($events['events'])) {
    
                     // Reply message
                     $respMessage = ''. $event['message']['text'];
-                    /*
+                    
                     $userText = ''. $event['message']['text'];
                     switch($userText){
                         case 'กำหนดสอบ':
@@ -75,40 +76,28 @@ if (!is_null($events['events'])) {
                         break;
 
                     }
-                    */
-                    if($event['message']['text'] == "กำหนดสอบ"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-                    }elseif($event['message']['text'] == "สอบวันไหน"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-                    }elseif($event['message']['text'] == "สอบตอนไหน"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-                    }elseif($event['message']['text'] == "สอบเมื่อไร"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-                    }elseif($event['message']['text'] == "สอบวันใด"){
-                        $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php";
-                    }elseif($event['message']['text'] == "ขอใบประกาศ"){
-                        $respMessage = "ดาวน์โหลดใบคำร้อง คลิ๊ก >> http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80";
-
-                    }elseif($event['message']['text'] == "สวัสดี"){
-                        $respMessage = "สวัสดีครับ GT Bot ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
-                    }elseif($event['message']['text'] == "สวัสดีครับ"){
-                        $respMessage = "สวัสดีครับ GT Bot ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
-                    }elseif($event['message']['text'] == "สวัสดีค่ะ"){
-                        $respMessage = "สวัสดีครับ GT Bot ยินดีให้บริการครับ ติดต่อเจ้าหน้าที่ โทร. โทร. ๐ ๒๒๘๐ ๗๖๘๒, ๐ ๒๖๒๙ ๐๙๖๑-๒ ฝ่ายธุรการ (ต่อ ๑๗๓, ๑๗๑) ฝ่ายบริหาร (ต่อ ๓๐๒, ๓๐๑) ฝ่ายสถิติ (ต่อ ๑๙๒, ๑๑๙) ตั้งแต่เวลา ๑๓.๐๐ - ๑๘.๐๐ น. (เว้นวันอาทิตย์และวันพระปาฏิโมกข์) ติดต่อหรือแจ้งข้อมูลข่าวสาร email: mgth.data@gmail.com, kristm76@gmail.com";
-
-                    }elseif($event['message']['text'] == "ขอข้อสอบ"){
-                        $respMessage = "ท่านจะได้ข้อสอบ ต่อเมื่อท่านสมัครสอบแล้วไปสอบตามที่กำหนดครับ";
-                    }else{
-                        $respMessage = ''. $event['message']['text'];
-                    }
-                                
-                    $httpClient = new CurlHTTPClient($channel_token);
-                    $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
-        
-                    $textMessageBuilder = new TextMessageBuilder($respMessage);
-                    $response = $bot->replyMessage($replyToken, $textMessageBuilder);
                     
-                    break;
+                    // if($event['message']['text'] == "กำหนดสอบ"){
+                    //     $respMessage = "กำหนดสอบธรรมสนามหลวง คลิ๊ก >>
+                    //     http://www.gongtham.net/web/news.php";
+
+                    // }elseif($event['message']['text'] == "ขอใบประกาศ"){
+                    //     $respMessage = "ดาวน์โหลดใบคำร้อง คลิ๊ก >>
+                    //     http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80";
+
+                    // }elseif($event['message']['text'] == ""){
+                    //     $respMessage = ''. $event['message']['text'];
+                    // }else{
+                    //     $respMessage = 'ติดต่อเจ้าหน้าที่ โทร. ...';
+                    // }
+                                
+                    // $httpClient = new CurlHTTPClient($channel_token);
+                    // $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
+        
+                    // $textMessageBuilder = new TextMessageBuilder($respMessage);
+                    // $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+                    
+                    // break;
             }
 		}
 	}
