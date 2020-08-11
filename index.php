@@ -1,35 +1,4 @@
 <?php
-/*
-Name : Schedule Line Bot
-Feature
-    - ถามตารางงาน
-        ขอตารางงาน มกราคม
-        bot-return : รายงานของเดือนมกราคม
-        ลักษณะการตอบกลับ
-            12/01/2562 12:00 ประชุมวิชาการ
-            15/01/2562 12:00 ประชุมวิชาการ
-*/
-/*
- {
-  "events": [
-      {
-        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
-        "type": "message",
-        "timestamp": 1462629479859,
-        "source": {
-             "type": "user",
-             "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
-         },
-         "message": {
-             "id": "325708",
-             "type": "text",
-             "text": "Hello, world"
-          }
-      }
-  ]
-}
- */
-
 require_once('./vendor/autoload.php');
 
 // Namespace
@@ -65,13 +34,11 @@ if (!is_null($events['events'])) {
                     $userText = ''. $event['message']['text'];
                     switch($userText){
                         case 'กำหนดสอบ':
-                            $respMessage = 'กำหนดสอบธรรมสนามหลวง คลิ๊ก >>
-                            http://www.gongtham.net/web/news.php';
+                            $respMessage = 'กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php';
                         break;
 
                         case 'ใบคำร้อง':
-                            $respMessage = 'ดาวน์โหลดใบคำร้อง คลิ๊ก >>
-                            http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80';
+                            $respMessage = 'ดาวน์โหลดใบคำร้อง คลิ๊ก >> http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80';
                         break;
 
                     }
