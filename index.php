@@ -38,9 +38,8 @@ use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 
 // Token
-// $channel_token = '/5cH8bgLTxuBHp2kPzD22ZeFzPUoIQRn8q/8xJHrkFJQXd6es3fYyQC2Xe8tKkLMv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVoauQH8BDsl+q1qg5sGNoFHTIp+Fq46yQBRoMoXU9iuyQdB04t89/1O/w1cDnyilFU=';
-$channel_token = 'nbIgFBzg8pAmpUnJpb9I99uwzD8eVoLGKgIDO5xPQywMwDgLic96zmVV46sjNxXOv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVoBgfB42B3BLNEl2xZb32IoBZrlbtaw53fI+zG8YcJzKwdB04t89/1O/w1cDnyilFU='
-$channel_secret = '96949e37f434f68b030d11c49de14ddc';
+$channel_token = 'TBQw9ccESvmiR6bxmUvXXlbLyRfJdXV6tjczChHP/OjGp7hDRBApw0TmJ6xMPhCXv7iywr1OGuf8z5tYmKzwBwoMz4UdwT/DMO1vxa2+mVpVQ3kIwAT2/uAqs8Q0/AV0cOjbQ4ZnQQK3oqEWA1S5XwdB04t89/1O/w1cDnyilFU=';
+$channel_secret = '8e0040c9cf29e1724558c683fa929bc1';
 
 // Get message from Line API
 $content = file_get_contents('php://input');
