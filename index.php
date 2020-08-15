@@ -55,9 +55,11 @@ if (!is_null($events['events'])) {
                             $respMessage = 'ดาวน์โหลดใบคำร้อง คลิ๊ก >> http://www.gongtham.net/web/downloads.php?cat_id=5&download_id=80';
                         break;
 
-		// ส่วนของผลสอบ
+        // ส่วนของผลสอบ
+        $b1 = ('<b>');
+        $b1 = ('</b>');
 			case '8877';
-			    $respMessage = "ชื่อ: '<b>'ชนากานต์'</b>'
+			    $respMessage = "ชื่อ: $b1'ชนากานต์'$b1
 นามสกุล: โชติประเสริฐ
 รร.: วัดสวนส้ม(สุขประนุกูล)
 สนร.: วัดมหาธาตุยุวราชรังสฤษฎิ์
