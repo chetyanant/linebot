@@ -1,6 +1,5 @@
 <?php
 require_once('./vendor/autoload.php');
-require_once('./json/image-message.json');
 
 // Namespace
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
@@ -58,11 +57,8 @@ if (!is_null($events['events'])) {
                         break;
 
         // ส่วนของผลสอบ
-        $b1 = ('<b>');
-        $b1 = ('</b>');
 			case '8877';
-                $respMessage = "
-1
+                $respMessage = "1
 2
 3
 4
