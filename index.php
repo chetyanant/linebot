@@ -61,7 +61,17 @@ if (!is_null($events['events'])) {
         $b1 = ('<b>');
         $b1 = ('</b>');
 			case '8877';
-			    $respMessage = "ชื่อ: $b1 ชนากานต์ $b2
+                $respMessage = "
+1
+2
+3
+4
+5
+6
+7
+8
+9
+ชื่อ: ชนากานต์
 นามสกุล: โชติประเสริฐ
 รร.: วัดสวนส้ม(สุขประนุกูล)
 สนร.: วัดมหาธาตุยุวราชรังสฤษฎิ์
@@ -110,30 +120,6 @@ if (!is_null($events['events'])) {
                     $response = $bot->replyMessage($replyToken, $textMessageBuilder);
                     
                     // break;
-            }
-        }
-        if ($event['type'] == 'image') {
-            switch($event['image']['type']) {
-                case 'image':
-                    // Get replyToken
-                    $replyToken2 = $event['replyToken'];
-   
-                    // Reply image
-                    $respImage = ''. $event['image']['text'];
-                    
-                    $userImage = ''. $event['image']['text'];
-
-                    // switch($userImage){
-                    //     case 'สวัสดี':
-                    //         $respImage = 'สวัสดีครับ';
-                    //     break;
-
-
-                    $httpClient = new CurlHTTPClient($channel_token);
-                    $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
-        
-                    $textMessageBuilder = new TextMessageBuilder($respMessage);
-                    $response = $bot->replyMessage($replyToken, $textMessageBuilder);
             }
         }
 	}
