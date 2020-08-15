@@ -114,7 +114,7 @@ if (!is_null($events['events'])) {
         }
         if ($event['type'] == 'image') {
             switch($event['image']['type']) {
-                case 'text':
+                case 'image':
                     // Get replyToken
                     $replyToken2 = $event['replyToken'];
    
