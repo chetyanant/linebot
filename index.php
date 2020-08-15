@@ -1,5 +1,6 @@
 <?php
 require_once('./vendor/autoload.php');
+require_once('./json/image-message.json');
 
 // Namespace
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
@@ -32,16 +33,17 @@ if (!is_null($events['events'])) {
                     $respMessage = ''. $event['message']['text'];
                     
                     $userText = ''. $event['message']['text'];
+
                     switch($userText){
 			case 'สวัสดี':
-                            $respMessage = 'สวัสดีครับ';
-                        break;
+                $respMessage = 'สวัสดีครับ';
+            break;
 			case 'สอบนักธรรมวันไหน':
-                            $respMessage = 'นักธรรมชั้นตรี สอบวันที่ ๒๖ - ๒๙ กันยายน ๒๕๖๓ ส่วนนักธรรมชั้นโท-เอก สอบวันที่ ๒ - ๕ พฤศจิกายน ๒๕๖๓';
-                        break;
-                        case 'กำหนดสอบ':
-                            $respMessage = 'กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php';
-                        break;
+                $respMessage = 'นักธรรมชั้นตรี สอบวันที่ ๒๖ - ๒๙ กันยายน ๒๕๖๓ ส่วนนักธรรมชั้นโท-เอก สอบวันที่ ๒ - ๕ พฤศจิกายน ๒๕๖๓';
+            break;
+            case 'กำหนดสอบ':
+                $respMessage = 'กำหนดสอบธรรมสนามหลวง คลิ๊ก >> http://www.gongtham.net/web/news.php';
+            break;
 			case 'สอบธรรมศึกษาวันไหน';
 			    $respMessage = 'ธรรมศึกษา สอบวันพฤหัสบดีที่ ๒๔ ธันวาคม ๒๕๖๓ ส่วน กศน.,อุดมศึกษาและประชาชนทั่วไปบางส่วน สอบวันอาทิตย์ที่ ๒๗ ธันวาคม ๒๕๖๓';
 			break;
@@ -109,7 +111,31 @@ if (!is_null($events['events'])) {
                     
                     // break;
             }
-		}
+        }
+        if ($event['type'] == 'image') {
+            switch($event['image']['type']) {
+                case 'text':
+                    // Get replyToken
+                    $replyToken2 = $event['replyToken'];
+   
+                    // Reply image
+                    $respImage = ''. $event['image']['text'];
+                    
+                    $userImage = ''. $event['image']['text'];
+
+                    // switch($userImage){
+                    //     case 'สวัสดี':
+                    //         $respImage = 'สวัสดีครับ';
+                    //     break;
+
+
+                    $httpClient = new CurlHTTPClient($channel_token);
+                    $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
+        
+                    $textMessageBuilder = new TextMessageBuilder($respMessage);
+                    $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+            }
+        }
 	}
 }
 
