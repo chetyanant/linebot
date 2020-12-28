@@ -82,8 +82,23 @@ if (!is_null($events['events'])) {
             break;
 
         // ส่วนของผลสอบ
-			case '1111111111111';
-                $respMessage = "ชื่อ: ชนากานต์
+        case '[ชื่อ]เรืองยศ';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=เรืองยศ";
+            break;
+        case '[สกุล]จุฬานนท์';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=จุฬานนท์";
+            break;
+        case '[ชื่อ-สกุล]ปิยธิดา ภูวันเพ็ง';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=ปิยธิดา-ภูวันเพ็ง";
+            break;
+        case '[ID]13118xxxxxxxx';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=13118xxxxxxxx";
+            break;
+        case '[SC]โรงเรียนสตรีวัดระฆัง';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=โรงเรียนสตรีวัดระฆัง";
+            break;
+        case '1111111111111';
+            $respMessage = "ชื่อ: ชนากานต์
 นามสกุล: xxxxx
 รร.: วัดสวนส้ม(สุขประนุกูล)
 สนร.: วัดมหาธาตุยุวราชรังสฤษฎิ์
@@ -91,7 +106,7 @@ if (!is_null($events['events'])) {
 ปกศ.เลขที่: กท ๑๔๑๖๒/xxxxx
 พ.ศ.2562";
 			break;
-			case '1111111111112';
+		case '1111111111112';
 			    $respMessage = 'ชื่อ: ณธิดา 
 นามสกุล: xxxxx
 รร.: สุขฤทัย
@@ -101,8 +116,8 @@ if (!is_null($events['events'])) {
 พ.ศ.2562';
             break;
         // ส่วนของผลสอบ ที่สอบไม่ผ่าน
-            case '1212121212121';
-                $respMessage = ':(__ขอแสดงความเสียใจด้วยครับ__:(
+        case '1212121212121';
+            $respMessage = ':(__ขอแสดงความเสียใจด้วยครับ__:(
 ผู้เข้าสอบหมายเลข ปชช. นี้
 ยังสอบไม่ผ่านชั้นใดเลย
 ขอให้ท่านพยามอีกนิด
