@@ -109,7 +109,7 @@ if (!is_null($events['events'])) {
         case '[id]1234567891011';
             $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=1234567891011";
             break;
-        case '[sc]โรงเรียนโรงเรียนผ่องพลอยอนุสรณ์';
+        case '[sc]โรงเรียนผ่องพลอยอนุสรณ์';
             $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=โรงเรียนผ่องพลอยอนุสรณ์";
             break;
         case '1111111111111';
