@@ -106,10 +106,10 @@ if (!is_null($events['events'])) {
         case '[ชื่อ-สกุล]ปิยธิดา ภูวันเพ็ง';
             $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=ปิยธิดา-ภูวันเพ็ง";
             break;
-        case '[ID]13118xxxxxxxx';
-            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=13118xxxxxxxx";
+        case '[id]1234567891011';
+            $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=1234567891011";
             break;
-        case '[SC]โรงเรียนสตรีวัดระฆัง';
+        case '[sc]โรงเรียนโรงเรียนผ่องพลอยอนุสรณ์';
             $respMessage = "ผลการสืบค้น https://www.dhammastudy.org/passexam?pass_id=โรงเรียนสตรีวัดระฆัง";
             break;
         case '1111111111111';
